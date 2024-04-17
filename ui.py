@@ -92,6 +92,8 @@ while not selected == "exit":
             break
         except:
             continue
+    if value == "exit":
+        exit()
 
     print(selected)
 
@@ -102,14 +104,15 @@ while not selected == "exit":
     If a market driver is selected:
         - Search the web again using the OpenAI API to find statistical evidence to support it.
         - Display the statistical evidence.
-        - Show evidence in deatiled format with sources.
+        - Show evidence in deatiled format with siting if possible.
         - Show everything in JSON format.
     """
     result = agent_executor({"input": question, "chat_history": chat_history})
-    chat_history.extend(
-        [
-            HumanMessage(content=question),
-            AIMessage(content=result["output"]),
-        ]
-    )
+    # dont add for market driver selection
+    # chat_history.extend(
+    #     [
+    #         HumanMessage(content=question),
+    #         AIMessage(content=result["output"]),
+    #     ]
+    # )
     print(result["output"])
