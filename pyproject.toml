@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "langchain-research-agent"
+version = "0.1.0"
+description = ""
+authors = ["Ram <r4mbhardwaj@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+channels = "^4.0.0"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.9"
+django-allauth = "^0.57.0"
+django-json-widget = "^1.1.1"
+langchain = "^0.0.354"
+openai = "^1.6.1"
+pinecone-client = "^3.0.2"
+djangorestframework = "^3.14.0"
+django-gravatar2 = "^1.4.4"
+tiktoken = "^0.5.2"
+whitenoise = "^6.6.0"
+pypdf2 = "^3.0.1"
+streamlit = "^1.33.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
