@@ -55,10 +55,11 @@ from langchain.agents import AgentExecutor
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
 question = """
-- Search the web for the top 3 market drivers of electric cars using the OpenAI API.
+- Search the web for the top 3 market drivers of sugar-free lollies using the OpenAI API.
 - save the market drivers data to be used later as dict in the global variable market_drivers (
     - market_drivers: json
     for example market drivers for ev cars: 
+    key (market driver): value (description)
     {
         "environmental concerns": "The increasing environmental concerns are driving the demand for electric cars.",
         "government incentives": "The availability of government incentives is driving the demand for electric cars.",
